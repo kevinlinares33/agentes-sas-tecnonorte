@@ -318,7 +318,7 @@ with tab_analisis:
     with g1:
         st.markdown("**Inventario: disponible vs. inicial**")
         st.bar_chart(pd.DataFrame({"Inicial": {v["nombre"]: PRODUCTOS[k_]["disponible"] for k_, v in E.productos.items()},
-                                   "Disponible": {v["nombre"]: v["disponible"] for v in 
+                                   "Disponible": {v["nombre"]: v["disponible"] for v in E.productos.values()}}), stack=False)
     with g2:
         st.markdown("**Unidades vendidas por producto**")
         vendidas = {v["nombre"]: 0 for v in E.productos.values()}
